@@ -1,0 +1,16 @@
+version: '3.13'
+
+services:
+  web:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - SECRET_KEY=django-insecure-97%n%3e-o7r=(6a2+c1=w&u5$t*o2g#6x-f3larq=lw3zdc=p_
+      - DEBUG=True
+      - ALLOWED_HOSTS_DEV=*
+      - CORS_ALLOWED_ORIGINS_DEV=http://localhost:3000
+      - CSRF_TRUSTED_ORIGINS_DEV=http://localhost:3000
