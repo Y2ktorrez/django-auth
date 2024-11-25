@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    
-    path('api/user/', include('apps.user.urls')),
-    path('admin/', admin.site.urls),
+    path('api/user/', include('apps.user.urls')),  # Rutas de tu app
+    path('admin/', admin.site.urls),              # Admin de Django
+    # Nota: No agregues una ruta explícita para '/' aquí
 ]
+
